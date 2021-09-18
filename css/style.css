@@ -1,0 +1,414 @@
+:root{
+    --primary-color:#202B38;
+    --secondary-color:#1BBC9B;
+    --bg-color:#E3F1EE;
+    --rgb-color:rgba(0,0,0,.4);
+}
+/* ======================================
+BASIC SETUP
+====================================== */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size:15px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+}
+/* ======================================
+REUSABLE COMPONENTS
+====================================== */
+.row{
+    max-width:960px;
+    margin: 0 auto;
+}
+.btn:link,
+.btn:visited,
+.btn{
+    border: 2px solid var(--secondary-color);
+    background: transparent;
+    padding: 10px 30px;
+    color: var(--secondary-color);
+    font-weight:500;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+}
+.btn:hover{
+    background:var(--secondary-color);
+    color:#fff;
+}
+h2{
+    padding-top: 0;
+    padding-bottom: 30px;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 300;
+}
+/* ======================================
+HEADER
+====================================== */
+header{
+    background: var(--primary-color);
+    padding:15px 0;
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+header::after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.logo{
+    float:left;
+}
+.logo img{
+    width:40px;
+    height:auto;
+    margin-top: 5px;
+}
+.logo-title{
+    float:right;
+    display: block;
+    color:#fff;
+    font-size:32px;
+    margin-left: 12px;
+}
+.main-nav{
+    float: right;
+    margin-top: 15px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 25px;
+}
+.main-nav li:first-child{
+    margin-left: 0;
+}
+.main-nav li a{
+    text-transform: uppercase;
+    color:#fff;
+    font-weight: 500;
+    transition: .3s;
+}
+.active{
+    color:var(--secondary-color);
+}
+.main-nav li:hover a{
+    color:var(--secondary-color);
+}
+/* ======================================
+HERO SECTION
+====================================== */
+#hero-section{
+    background:linear-gradient(rgba(32, 43, 56, 0.4), rgba(32, 43, 56, 0.4)), url('../img/advert_bg.jpg');
+    height:90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-text{
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width:50%;
+}
+.hero-title{
+    font-size: 48px;
+    color:#fff;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+/* ======================================
+WELCOME SECTION
+====================================== */
+#welcome-section{
+    padding:70px 0;
+    text-align: center;
+}
+.wel-col{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+.wel-info p{
+    text-align: left;
+    width:290px;
+}
+.btn-one:link,
+.btn-one:visited{
+    margin-top: 45px;
+}
+/* ======================================
+ SERVICES SECTION
+====================================== */
+#service-section{
+    background:var(--bg-color);
+    padding-top:60px;
+    padding-bottom:90px;
+    height:auto;  
+    overflow: hidden;
+}
+.service{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.service-info{
+    width:300px;
+    height:auto;
+    background:#fff;
+    padding-bottom: 40px;
+}
+.service-info img{
+    width:100%;
+}
+.service-text{
+    padding:20px;
+}
+.service-text h3{
+    color:var(--primary-color);
+    text-transform: capitalize;
+    font-size:24px;
+    font-weight: 600;
+}
+.service-text a{
+    color:var(--primary-color);
+    transition: .3s;
+}
+.service-text a:hover{
+    color:var(--secondary-color)
+}
+.service-text P{
+    margin-top: 15px;
+}
+.btn-two:link,
+.btn-two:visited{
+    text-align: center;
+    margin-top: -6px;
+    margin-left: 20px;
+}
+/* ======================================
+ SLIDER SECTION
+====================================== */
+#slider-section{
+    position: relative;
+    overflow: hidden;
+}
+.mySlides{
+    display: none
+}
+img{
+    vertical-align: middle;
+    width:100%;
+}
+.slideshow-container {
+  max-width:100%;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color:var(--secondary-color);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  color:#fff;
+}
+.text {
+  color:#fff;
+  padding: 8px 12px;
+  position: absolute;
+  bottom:30%;
+  left:18%;
+  width:30%;
+  text-align: left;
+}
+.text h2{
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.text h2,
+.text p{
+    text-align: left;
+}
+.text a{
+    color:var(--secondary-color);
+    font-weight:700;
+    text-decoration: underline;
+    transition: .3s;
+}
+.text a:hover{
+    color:#fff;
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color:#bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;  
+}
+.dot-btn{
+    position: absolute;
+    left:50%;
+    bottom:5%;
+}
+.active, .dot:hover {
+  background-color: #fff;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/* ======================================
+PARTNERS SECTION
+====================================== */
+#partner-section{
+    padding-top:60px;
+    padding-bottom:80px;
+    height:auto;
+}
+.partner-logo{
+    display: flex;
+    justify-content: space-between;
+}
+/* ======================================
+CONTACT SECTION
+====================================== */
+#contact-section{
+    background: url("../img/contact_bg.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height:auto;
+    padding:50px 0;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-info input[type="text"]{
+    padding:12px 25px;
+    border:2px solid var(--secondary-color);
+    border-radius:25px;
+    font-size:16px;
+    margin-left: 20px;
+    font-weight:500;
+    width:47%;
+}
+.contact-info h2{
+    color:#fff;
+    text-align:left;
+}
+.contact-info input[type="text"]:first-child{
+    margin-left:0;
+}
+textarea{
+    border:2px solid var(--secondary-color);
+    border-radius: 25px;
+    padding:20px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight:400;
+    font-family: 'Roboto', sans-serif;
+}
+.contact-btn{
+    padding:14px 50px;
+    background:var(--secondary-color);
+    font-weight: 500;
+    color:#fff;
+    font-size: 15px;
+    margin-right: 15px;
+}
+.contactBtn-two{
+    border:none;
+    background:var(--rgb-color);
+    color:#fff;
+    padding:15px 0px;
+    text-align: center;
+    border-bottom:1px solid #fff;
+}
+.contactBtn-two:focus{
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+}
+/* ======================================
+CONTACT SECTION
+====================================== */
+footer{
+    background:var(--primary-color);
+    padding:20px 0;
+}
+.footer-widget{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color:#fff;
+}
+.social-link i{
+    background:#fff;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    font-size:24px;
+    text-align: center;
+    line-height:1.8;
+    color:var(--primary-color);
+    transition:.3s;
+    margin-left: 5px;
+}
+.social-link i:hover{
+    background:var(--secondary-color);
+    color:#fff;
+    transform: rotate(360deg);
+}

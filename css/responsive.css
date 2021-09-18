@@ -1,0 +1,87 @@
+@media screen and (max-width: 992px){
+/* ======================================
+HERO SECTION
+====================================== */
+.hero-text{
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width:70%;
+}
+.hero-title{
+    font-size: 42px;
+    color:#fff;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.text{
+    width:40%;
+}
+.text h2{
+    font-size:36px;
+}
+}
+@media screen and (max-width: 768px){
+    .hero-text{
+        position: absolute;
+        top:60%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width:90%;
+    }
+    .wel-col{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wel-info p{
+        width:100%;
+        padding: 15px 10px;
+    }
+    .service{
+        flex-direction: column;
+    }
+    .service-info{
+        width:100%;
+        margin:20px;
+    }
+    .text{
+        width:100%;
+        bottom:15%;
+        left:5%;
+    }
+    .text h2{
+        font-size:30px;
+        margin-bottom: -10px;
+    }
+/* ======================================
+CONTACT SECTION
+====================================== */
+.contact{
+    flex-direction: column;
+}
+.contact-info input[type="text"]{
+    width:100%;
+    margin-left:0;
+    margin-bottom: 20px;
+}
+textarea{
+    width:100%;
+}
+iframe{
+    width:100%;
+    display: none;
+}
+.footer-widget{
+    flex-direction: column;
+    text-align: center;
+}
+}
+@media screen and (max-width:600px){
+    .main-nav li{
+        display: inline-block;
+        margin-left: 15px;
+    }
+}
